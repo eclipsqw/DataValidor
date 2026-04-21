@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataValidor — Проверка информации</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Шапка сайта -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-search-check"></i>
+                <h1>DataValidor</h1>
+            </div>
+            <p class="tagline">Проверяй информацию. Думай критически.</p>
+        </header>
+
+        <!-- Основной контент -->
+        <main class="main-content">
+            <!-- Блок 1: Проверка информации -->
+            <section class="card">
+                <h2><i class="fas fa-check-circle"></i> Проверить информацию</h2>
+                <p class="description">Вставьте текст или ссылку для анализа достоверности</p>
+                
+                <div class="input-group">
+                    <textarea id="inputText" placeholder="Пример: 'Искусственный интеллект полностью заменит врачей к 2030 году' или https://example.com/news"></textarea>
+                    <div class="char-count">Символов: <span id="charCount">0</span>/5000</div>
+                </div>
+                
+                <button class="btn-primary" onclick="analyzeText()">
+                    <i class="fas fa-play"></i> Анализировать
+                </button>
+                
+                <div class="result-box" id="textResult">
+                    <div class="result-placeholder">
+                        <i class="fas fa-chart-bar"></i>
+                        <p>Здесь появится результат проверки</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Блок 2: Анализ проекта -->
+            <section class="card">
+                <h2><i class="fas fa-file-alt"></i> Оценить проект</h2>
+                <p class="description">Загрузите текстовый файл (.txt, .docx) для оценки структуры</p>
+                
+                <div class="upload-area" id="uploadArea">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <p>Перетащите файл сюда или</p>
+                    <input type="file" id="fileInput" accept=".txt,.docx,.pdf">
+                    <label for="fileInput" class="btn-secondary">Выбрать файл</label>
+                    <p class="file-info">Максимум 5 MB</p>
+                </div>
+                
+                <div class="result-box" id="projectResult">
+                    <div class="result-placeholder">
+                        <i class="fas fa-clipboard-check"></i>
+                        <p>Здесь появится оценка вашего проекта</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Блок 3: Статистика -->
+            <section class="card">
+                <h2><i class="fas fa-chart-line"></i> Как работает DataValidor?</h2>
+                <div class="workflow">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Получение данных</h3>
+                        <p>Вы вводите текст или загружаете файл</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>AI-анализ</h3>
+                        <p>Нейросеть проверяет факты и структуру</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Отчёт</h3>
+                        <p>Вы получаете детальный анализ с рекомендациями</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Подвал -->
+        <footer class="footer">
+            <p>© 2023 DataValidor | Проект по критическому мышлению</p>
+            <p class="footer-links">
+                <a href="#"><i class="fab fa-github"></i> GitHub</a> | 
+                <a href="#"><i class="fas fa-question-circle"></i> Помощь</a> | 
+                <a href="#"><i class="fas fa-envelope"></i> Контакты</a>
+            </p>
+        </footer>
+    </div>
+
+    <!-- Подключаем JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
